@@ -11,14 +11,17 @@ namespace PongTest
         SpriteBatch spriteBatch;
         Texture2D ballTexture;
         Texture2D player1Texture;
+        Texture2D player2Texture;
         Color[] data;
         Vector2 coor = new Vector2(0, 0);
         Vector2 vel = new Vector2(1, 1);
         Vector2 acc = new Vector2(0.01F, 0.01F);
-        readonly int width = 1000;
-        readonly int height = 500;
+        readonly int width = 1700;
+        readonly int height = 850;
+
         Ball ball;
         Player player1;
+        Player player2;
 
 
         public Game1()
@@ -31,11 +34,11 @@ namespace PongTest
 
         protected override void Initialize()
         {
-            player1 = new Player();
+  
             ball = new Ball();
+            player1 = new Player();
+            player2 = new Player();
 
-            ballTexture = this.CreateTexture2D((int)ball.squaredim.X, (int)ball.squaredim.Y,ball.color);
-            player1Texture = this.CreateTexture2D((int)player1.size.X, (int)player1.size.Y,player1.color);
 
             base.Initialize();
         }
@@ -52,6 +55,9 @@ namespace PongTest
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            ballTexture = this.Content.Load<Texture2D>("ball");
+            player1Texture = this.Content.Load<Texture2D>("Player1");
+            player2Texture = this.Content.Load<Texture2D>("Player2");
         }
 
         protected override void UnloadContent()
@@ -79,6 +85,7 @@ namespace PongTest
             spriteBatch.Begin();
             spriteBatch.Draw(ballTexture, ball.coor);
             spriteBatch.Draw(player1Texture, player1.coor);
+            spriteBatch.Draw(player2Texture, player2.coor);
             spriteBatch.End();
 
             base.Draw(gameTime);

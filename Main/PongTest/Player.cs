@@ -11,9 +11,8 @@ namespace PongTest
     {
         int lives = 3;
         public Vector2 size = new Vector2(10, 80);
-        public Vector2 coor = new Vector2(10, 0);
+        public Vector2 coor = new Vector2(50, 0);
         public Vector2 vel = new Vector2(10, 10);
-        public Color color = Color.Black;
         
 
         public void Move(string ButtonPressed)
