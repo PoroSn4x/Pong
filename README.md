@@ -1,2 +1,0 @@
-# Pong
-Practicum 1
