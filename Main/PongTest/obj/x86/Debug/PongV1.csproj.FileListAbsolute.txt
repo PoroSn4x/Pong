@@ -1,0 +1,4 @@
+C:\Users\merij\source\repos\Main\PongTest\obj\x86\Debug\PongV1.csprojAssemblyReference.cache
+C:\Users\merij\source\repos\Main\PongTest\obj\x86\Debug\PongV1.csproj.CoreCompileInputs.cache
+C:\Users\merij\source\repos\Main\PongTest\obj\x86\Debug\PongTest.exe
+C:\Users\merij\source\repos\Main\PongTest\obj\x86\Debug\PongTest.pdb
